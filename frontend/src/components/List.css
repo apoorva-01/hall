@@ -1,0 +1,142 @@
+:root {
+  --mainColor: #20615b;
+  --textColor: #eee;
+
+}
+header {
+  width: 100%;
+  /* background-color: var(--mainColor);  */
+  background-image: url(https://github.com/Hall-Of-Fame-03/Hall-of-Fame/blob/main/src/images/background.jpg?raw=true);
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 100%;
+  /* background-color: #03506F; */
+  margin: auto;
+  max-width: 1200px;
+  font-family: "Roboto", sans-serif;
+}
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button.nav-btn{
+  padding:5px;
+  cursor: pointer;
+  background:transparent;
+  border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.4rem;
+}
+.logo {
+  width: 120px;
+  padding: 0.5em 0;
+}
+.list {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+}
+.listItem{
+    margin-left: 2em;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+}
+.activeItem {
+  color: pink;
+  border-bottom: 0.1em double #fff;
+}
+.icon {
+  color: white;
+  font-size: 1.5rem !important;
+  margin-right: 1.5rem;
+  margin-left: 1em;
+}
+.listItem.vprofile{
+  display: none;
+}
+
+/* @media screen and (max-width: 1100px) {
+  .icon {
+    margin-left: 1em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+  .container-flex {
+    flex-direction: column;
+  }
+  .logo {
+    width: 150px;
+  }
+  .icon {
+    margin: 1em 1.5em;
+  }
+}
+@media screen and (max-width: 568px) {
+  html {
+    font-size: 11px;
+  }
+  .list {
+    flex-direction: row;
+  }
+  .listItem {
+    margin-top: 0.2em;
+  }
+} */
+
+
+@media only screen and (max-width: 1024px) {
+	button.nav-btn {
+		visibility: visible;
+		opacity: 1;
+    margin-left: 60%;
+    
+	}
+  /*  */
+  
+
+	.container container-flex nav {
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: var(--mainColor);
+		transition: 1s;
+    transform: translateY(-100vh);
+	}
+
+	.container  .responsive_nav {
+		transform: none;
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	
+}
+@media only screen and (max-width:768px){
+  .listItem.vprofile{
+    display: block;
+  }
+}
